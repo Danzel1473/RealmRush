@@ -5,14 +5,16 @@ using UnityEngine;
 [System.Serializable]
 public class Node
 {
-    public Vector2Int coordinates = new Vector2Int(2,2);
-    public bool isWalkable;
+    public Vector2Int coordinates;
+    public bool isWalkable = true;
     public bool isExplored;
     public bool isPath;
     public Node connectedTo;
 
-    public Node(Vector2Int coordinates, bool isWalkable){
+    public Node(Vector2Int coordinates, bool isWalkable)
+    {
         this.coordinates = coordinates;
         this.isWalkable = isWalkable;
     }
+
 }
